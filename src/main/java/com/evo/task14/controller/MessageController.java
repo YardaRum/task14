@@ -15,8 +15,7 @@ import java.util.Optional;
 @RestController
 public class MessageController {
 
-
-    private List<Message> messages = new ArrayList<>(Arrays.asList(
+    private final List<Message> messages = new ArrayList<>(Arrays.asList(
             new Message(1, "hello", "test text1", LocalDateTime.now()),
             new Message(2, "wake up", "test text2", LocalDateTime.now()),
             new Message(3, "just do it", "test text3", LocalDateTime.now()),

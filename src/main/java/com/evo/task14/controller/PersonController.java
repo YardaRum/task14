@@ -21,12 +21,6 @@ public class PersonController {
             new Person(4, "Максим", "Яковлевич", "Окопский", LocalDate.of(1978, 6, 5))
     ));
 
-    @PostMapping("/person")
-    public ResponseEntity<Person> setPerson(@RequestBody Person person) {
-        persons.add(person);
-        return new ResponseEntity<>(person, HttpStatus.CREATED);
-    }
-
     @GetMapping("/person")
     public Iterable<Person> getPerson() {
         return persons;
